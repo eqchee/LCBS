@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+# Longest Common Bitonic Subsequence Algorithm
 
-You can use the [editor on GitHub](https://github.com/eqchee/LCBS/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## About The Project
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Given 2 sequences A and B containing hexadecimals, this algorithm has been designed to find the length of the longest common bitonic subsequence. 
 
-```markdown
-Syntax highlighted code block
+To enhance the efficiency of the algorithm, the hexadecimals that are common to both sequences are shortlisted first. Then, dynamic programming is used to tabulate the length of the longest increasing subsequence and longest decreasing subsequence. Both tables are added up to determine the longest bitonic subsequence, deducting 1 so as to account of the duplication during the addition. 
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+## Time Complexity
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/eqchee/LCBS/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+The time complexity of this algorithm would be O(nm), where n is the number of inputs in list A and m is the number of inputs in list B. In the worst case scenario where all the inputs in list A are common to all the inputs in list B, the search for the longest common bitonic subsequence would require the outer for-loop to be executed n times and for each execution of the outer for-loop, the inner for-loop would be executed m times. Thus, the total number of operations from the nested for-loops would be nm based on product rule and the time complexity would be O(nm).
